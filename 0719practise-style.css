@@ -46,14 +46,14 @@ p{
    color: rgb(41, 41, 41);
 }
 .slogan{
-    background-color: red;
+    background-color: green;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 .slogan h2{
     font-size: 32px;
-    color: green;
+    color: #ffffff;
     margin-top: 0;
     margin-bottom: 0;
 }
