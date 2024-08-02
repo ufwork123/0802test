@@ -1,0 +1,194 @@
+/* CSS文件快速搜尋：Ctrl+F */
+body {
+    /* 外距：margin(後方數值依順時針順序：上、右、下、左) */
+    margin: 0;
+}
+
+/* 響應式Banner */
+.banner img{
+    width: 100%;
+}
+
+.text {
+    /* 輔助線|邊框：border、線條：border、樣式：solid */
+    /* border: 1px solid red; */
+    width: 1200px;
+    /* 頁面置中(目前視窗-現有區塊寬度÷2) */
+    margin-left: auto;
+    margin-right: auto;
+    /* 水平排列(要有父子元素才可，且不可隔代控制)：flex */
+    display: flex;
+    /* 內容：content、對齊左右中間均分：space-between、左右固定留白中間均分：space-around */
+    justify-content: space-between;
+    /* 內距：padding、上：top、下：bottom */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.textbox {
+    /* 輔助線 */
+    /* border: 1px solid rgb(0, 103, 17); */
+    width: 360px;
+    /* 背景色：background-color */
+    /* background-color: rgb(255, 235, 185); */
+    /* 水平對齊：text-align、置中：center、左右對齊：justify */
+    text-align: center;
+    padding-left: 10pt;
+    padding-right: 10pt;
+}
+.textbox h2{
+    font-size: 32px;
+    color: #FF0000;
+}
+p{
+   text-align: left;
+   font-size: 20px;
+   color: rgb(41, 41, 41);
+}
+.slogan{
+    background-color: red;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.slogan h2{
+    font-size: 32px;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.reCommand h2{
+    font-size: 32px;
+    color: #0a7c00;
+    text-align: center;
+}
+.classContent{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    /* 推薦課程並排 */
+    display: flex;
+    /* 推薦課程左右對齊，中間平均分配 */
+    justify-content: space-between;
+}
+.classBox{
+    width: 320px;
+    /* 外框陰影：box-shadow(水平、垂直、粗細、顏色) */
+                         /* 顏色：rgba(紅、綠、藍、透明度) */
+    box-shadow: 0 0 10px #00000080;
+    /* 外框內側增加留白區 */
+    padding: 20px;
+}
+/* classBox中的img */
+.classBox img{
+    width: 100%;
+}
+.classBox h3{
+    /* em=rem=16px */
+    font-size: 2rem;
+}
+.classBox .p-blue{
+    color: rgb(106, 150, 246);
+}
+.classBox p{
+    color: #707070;
+    font-size: 18px;
+}
+.classBox p s{
+    font-size: 20px;
+}
+.classBox p span{
+    font-size: 22px;
+    color: red;
+    /* 字型粗細：font-weight */
+    font-weight: bold;
+}
+.classBox .p-center{
+    text-align: center;
+}
+/* 超連結按鈕設定 */
+.classBox div a{
+    background-color: red;
+    color: #fff;
+    /* dashed */
+    text-decoration: none;
+    /* 因超連結預設為行內元素，本身沒有寬高，所以將超連結改成區塊元素 */
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* 圓角：border-radius */
+    border-radius: 10px;
+}
+/* 超連結按鈕滑過設定 */
+.classBox div a:hover{
+    background-color: #960000;
+}
+/* 一般按鈕設定 */
+.classBox button{
+    background-color:red;
+    color: #fff;
+    /* 取消邊框 */
+    border: none;
+    font-size: 20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+/* 一般按鈕位置設定 */
+.classBox .div-center{
+    text-align: center;
+}
+/* 一般按鈕滑過設定 */
+.classBox button:hover{
+    /* 手指形狀：pointer、進度圈：progress、手掌：grab*/
+    cursor: pointer;
+    background-color: #960000;
+}
+/* ★ 盒模型：CSS Box Model|外距：margin、邊框：border、內距：padding、內容：content */
+
+/* 響應式小尺寸設定 */
+@media (max-width:639px){
+#wrap{
+    width: 100%;
+    margin: auto;
+}
+
+/* 文字區塊堆疊排列 */
+.text{
+    /* 維持flex特性，只改變方向：flex-direction: column(垂直) */
+    /* 純粹堆疊排列：display: block */
+    display: block;
+    width: 80%;
+}
+.textbox {
+    width: 80%;
+    margin: auto;
+}
+
+/* 推薦課程堆疊排列 */
+.classContent{
+    display: block;
+    width: 80%;
+}
+.classBox{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+}
+
+/* 響應式中尺寸設定 */
+@media (min-width:640px) and (max-width:1119px){
+    .text{
+        width: 80%;
+    }
+    .classContent{
+        width: 80%;
+    }
+    .classBox{
+        width: 80%;
+        margin-right: 20px;
+    }
+}
